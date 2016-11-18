@@ -1,4 +1,6 @@
 #! /bin/sh
+# This is from ask ubuntu
+# http://askubuntu.com/questions/148932/how-can-i-get-a-list-of-all-repositories-and-ppas-from-the-command-line-into-an
 # Script to get all the PPA installed on a system
 for APT in `find /etc/apt/ -name \*.list`; do
     grep -Po "(?<=^deb\s).*?(?=#|$)" $APT | while read ENTRY ; do
